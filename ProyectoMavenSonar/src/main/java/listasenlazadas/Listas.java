@@ -1,30 +1,30 @@
+package listasenlazadas;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-//package com.mycompany.proyectomavensonar;
 
-import java.io.*;
-import java.util.Scanner;
-import javax.swing.JOptionPane;
+
+
 /**
  *
  * @author Sergio
  */
 
     
-public class listas {
+public class Listas {
         
     private Nodo ini;
     private Nodo fin;
     
-    public listas(){
+    public Listas(){
         ini = null;
         fin = null;
     }
 
-    public void introIni(String dato){//introduciomos un dato al principio de la lista
+    //introduciomos un dato al principio de la lista
+    public void introIni(String dato){
         if(ini == null){
             ini = new Nodo(dato,null,null);
             fin = ini;
@@ -35,7 +35,8 @@ public class listas {
         }
     }
     
-    public void introFin(String dato){//Introduciomos un dato al final de la lista
+    //Introduciomos un dato al final de la lista
+    public void introFin(String dato){
         if(ini == null){
             fin = new Nodo(dato,null,null);
             ini = fin;
@@ -46,7 +47,8 @@ public class listas {
         }
     }
 
-    public String deleteIni(){//borramos el nodo del inicio
+    //borramos el nodo del inicio
+    public String deleteIni(){
         String dato = ini.getDato();
         ini = ini.getNext();
         if(ini != null){
@@ -57,7 +59,8 @@ public class listas {
         return dato;
     }
     
-    public String deleteFin(){//borramos el nodo del final
+    //borramos el nodo del final
+    public String deleteFin(){
         String dato = fin.getDato();
         fin = fin.getPrev();
         if(fin != null){
